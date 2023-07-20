@@ -60,5 +60,5 @@ autosize=True,
 # fig2.show()
 
 st.header("⚓ Monash Organisation Chart")
-st.subheader("Faculty -> Division -> Org Unit")
+st.subheader("Faculty ➡ Division ➡ Org Unit")
 st.plotly_chart(fig2, use_container_width=True)
