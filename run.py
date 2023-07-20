@@ -4,7 +4,7 @@ import streamlit as st
 
 import plotly.express as px 
 import pandas as pd
-df = pd.read_csv(r"C:\Users\jsiu0002\Downloads\Only_once\PageUp-Org\Report about Organisation 2023-07-20T1525.csv")
+df = pd.read_csv("Report about Organisation 2023-07-20T1525.csv")
 df['Value'] = 1
 # df = df[df['Organisational Unit Title'] != '']
 df = df[df['Organisational Unit Title'] != '']
