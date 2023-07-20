@@ -4,7 +4,7 @@ import streamlit as st
 
 import plotly.express as px 
 import pandas as pd
-df = pd.read_csv("Report about Organisation 2023-07-20T1525.csv")
+df = pd.read_csv(r"Report about Organisation 2023-07-20T1525.csv")
 df['Value'] = 1
 # df = df[df['Organisational Unit Title'] != '']
 df = df[df['Organisational Unit Title'] != '']
@@ -48,11 +48,7 @@ fig2 = px.treemap(df_dict,
 
 fig2.update_layout(
     # title_text="Monash Organisational Chart Diagram" 
-     title=dict(
-        text='<b><span style="font-family: Courier New, Monospace; font-size: 28pt">Monash Organisation Chart</span><br><br><span style="font-family: Courier New, Monospace;font-size: 15pt"> Faculty -> Division -> Org Unit</span></b>'
-    )
-                   
-                   ,    font_family="Calibri"
+                   font_family="Calibri"
                    ,font_size=25
                    ,grid= dict(columns=10, rows=4)
                    ,uniformtext=dict(minsize=35)
@@ -63,4 +59,6 @@ autosize=True,
 )
 # fig2.show()
 
+st.header("⚓ Monash Organisation Chart")
+st.subheader("Faculty -> Division -> Org Unit")
 st.plotly_chart(fig2, use_container_width=True)
